@@ -20,7 +20,6 @@ int main(int argc, char* argv[]){
     #pragma omp parallel for num_threads(thread_count) reduction(+:sum)
     for (int k = 1; k < n; k +=2) {
         sum  += (1.0/((2.0*(k-1.0)) + 1.0)) - (1.0/((2.0*k) + 1.0));
-
     }
 
     double pi_approx = 4*sum;
